@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Facebook</string>
+    <string name="userNameHint">Login</string>
+    <string name="passwordHint">Password</string>
+    <color name="bg">#3b5998</color>
+    <color name="white">#FFFFFF</color>
+</resources>
