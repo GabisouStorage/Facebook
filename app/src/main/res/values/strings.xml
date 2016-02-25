@@ -3,6 +3,8 @@
     <string name="userNameHint">Login</string>
     <string name="passwordHint">Password</string>
     <string name="passwordCheckHint">Confirm Password</string>
+    <string name="ok">"Login Sucesso"</string>
+    <string name="wrong">"Tente de novo"</string>
     <color name="bg">#3b5998</color>
     <color name="white">#FFFFFF</color>
     <color name="gray_font">#808080</color>

@@ -93,11 +93,22 @@
         android:text="Sign Up for Facebook"
         android:textSize="15sp"
         android:background="@color/bg"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
         android:layout_above="@+id/imageHelp"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/relativeLayoutLabelAuth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/bLogin"
+        android:layout_marginTop="10dp"
+        android:text="@string/ok"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
 
     <ImageView
         android:layout_width="50dp"
