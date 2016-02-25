@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     TextView labelAuth;
+    //EditText passCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,22 +22,41 @@ public class MainActivity extends AppCompatActivity {
         final Button buttonLogin = (Button) findViewById(R.id.bLogin);
         final EditText fieldLogin = (EditText) findViewById(R.id.loginEnter);
         final EditText fieldPassword = (EditText) findViewById(R.id.passwordEnter);
+        final TextView labelSignUp = (TextView) findViewById(R.id.lblSignUp);
         labelAuth = (TextView) findViewById(R.id.relativeLayoutLabelAuth);
+        final EditText passCheck = (EditText) findViewById(R.id.passwordCheck);
 
         buttonLogin.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v){
                 String login = fieldLogin.getText().toString();
                 String pass = fieldPassword.getText().toString();
+                String checkPass = passCheck.getText().toString();
 
-                if (login.equals("milho") && pass.equals("cozido")){
-                    labelAuth.setText(getString(R.string.ok));
-                    Toast.makeText(v.getContext(), "You're logged", Toast.LENGTH_SHORT).show();
+                if (buttonLogin.getVisibility() == View.VISIBLE){
+                    if (checkPass == pass){
+                        labelAuth.setText(getString(R.string.sucessReg));
+                    }else{
+                        labelAuth.setText(getString(R.string.errorReg));
+                    }
                 }else{
-                    labelAuth.setText(getString(R.string.wrong));
-                    Toast.makeText(v.getContext(), "Incorrect Data", Toast.LENGTH_SHORT).show();
+                    if (login.equals("milho") && pass.equals("cozido")){
+                        labelAuth.setText(getString(R.string.ok));
+                        Toast.makeText(v.getContext(), "You're logged", Toast.LENGTH_SHORT).show();
+                    }else{
+                        labelAuth.setText(getString(R.string.wrong));
+                        Toast.makeText(v.getContext(), "Incorrect Data", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 labelAuth.setVisibility(View.VISIBLE);
+            }
+        });
+
+        labelSignUp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                passCheck.setVisibility(View.VISIBLE);
+                buttonLogin.setText("Registrar");
             }
         });
 

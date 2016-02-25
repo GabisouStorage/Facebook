@@ -5,6 +5,9 @@
     <string name="passwordCheckHint">Confirm Password</string>
     <string name="ok">"Login Sucesso"</string>
     <string name="wrong">"Tente de novo"</string>
+    <string name="signUp"><u>Sign Up for Facebook</u></string>
+    <string name="sucessReg">"Registro foi feito com sucesso"</string>
+    <string name="errorReg">"As senhas não batem"</string>
     <color name="bg">#3b5998</color>
     <color name="white">#FFFFFF</color>
     <color name="gray_font">#808080</color>
