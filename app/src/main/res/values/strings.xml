@@ -2,7 +2,9 @@
     <string name="app_name">Facebook</string>
     <string name="userNameHint">Login</string>
     <string name="passwordHint">Password</string>
+    <string name="passwordCheckHint">Confirm Password</string>
     <color name="bg">#3b5998</color>
     <color name="white">#FFFFFF</color>
     <color name="gray_font">#808080</color>
+    <color name="button_color">#213a73</color>
 </resources>
