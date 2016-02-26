@@ -29,6 +29,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
         android:textColor="@color/gray_font"
         android:textColorHint="@color/gray_font"
         android:background="@drawable/rounded_edittext"
@@ -49,6 +51,8 @@
         android:layout_alignParentStart="true"
         android:textColor="@color/gray_font"
         android:textColorHint="@color/gray_font"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
         android:inputType="textPassword"
         android:background="@drawable/rounded_edittext"
         android:typeface="normal" />
@@ -67,10 +71,12 @@
         android:layout_alignParentStart="true"
         android:textColor="@color/gray_font"
         android:textColorHint="@color/gray_font"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
         android:inputType="textPassword"
         android:background="@drawable/rounded_edittext"
-        android:visibility="gone"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:visibility="gone" />
     
     <Button
         android:id="@+id/bLogin"
@@ -93,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signUp"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:layout_above="@+id/imageHelp"
         android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"/>

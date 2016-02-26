@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView labelAuth;
-    //EditText passCheck;
+    int coin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         final TextView labelSignUp = (TextView) findViewById(R.id.lblSignUp);
         labelAuth = (TextView) findViewById(R.id.relativeLayoutLabelAuth);
         final EditText passCheck = (EditText) findViewById(R.id.passwordCheck);
+        final ImageView helpImage = (ImageView) findViewById(R.id.imageHelp);
+
+
 
         buttonLogin.setOnClickListener(new Button.OnClickListener(){
             @Override
@@ -33,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 String pass = fieldPassword.getText().toString();
                 String checkPass = passCheck.getText().toString();
 
-                if (buttonLogin.getVisibility() == View.VISIBLE){
-                    if (checkPass == pass){
+                if (passCheck.getVisibility() == View.VISIBLE){
+                    if (checkPass.equals(pass)){
                         labelAuth.setText(getString(R.string.sucessReg));
                     }else{
                         labelAuth.setText(getString(R.string.errorReg));
@@ -55,8 +59,23 @@ public class MainActivity extends AppCompatActivity {
         labelSignUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                labelSignUp.setVisibility(View.GONE);
                 passCheck.setVisibility(View.VISIBLE);
                 buttonLogin.setText("Registrar");
+            }
+        });
+
+        helpImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(coin < 99) {
+                    coin++;
+                    Toast.makeText(v.getContext(), "Coins:" + coin, Toast.LENGTH_SHORT).show();
+                }else {
+                    coin = 0;
+                    Toast.makeText(v.getContext(), "1 UP", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), "Coins:" + coin, Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
